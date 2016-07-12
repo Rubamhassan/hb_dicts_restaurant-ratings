@@ -5,8 +5,11 @@ for line in input_file:
     line = line.split(":")
     score[line[0]]=line[1] 
 
-for item in score:
-    "%s is rated at %d" % item, score[item] 
+restaurant_list = score.items()
+restaurant_list.sort()
+
+for item in restaurant_list:
+    print "%s is rated at %s" % (item[0], item[1]) 
 
 
 
